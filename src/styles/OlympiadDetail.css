@@ -1,0 +1,120 @@
+.olympiad-detail-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .olympiad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .olympiad-header h1 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .status.upcoming {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .status.ongoing {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .status.completed {
+    background-color: #7f8c8d;
+    color: white;
+  }
+  
+  .olympiad-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .olympiad-content {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  .olympiad-description, .olympiad-schedule, .olympiad-rules {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+  
+  .olympiad-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .registration-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .registration-button:not(.registered) {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .registration-button:not(.registered):hover {
+    background-color: #2980b9;
+  }
+  
+  .registration-button.registered {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .registration-button.registered:hover {
+    background-color: #27ae60;
+  }
+  
+  .registration-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .olympiad-rules ul {
+    padding-left: 1.5rem;
+  }
+  
+  .olympiad-rules li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #e74c3c;
+    font-size: 1.2rem;
+  } 
