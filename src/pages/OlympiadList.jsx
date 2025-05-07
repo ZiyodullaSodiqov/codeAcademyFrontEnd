@@ -116,18 +116,20 @@ const OlympiadList = () => {
               <Card
                 title={
                   <Space>
-                    <Text strong>{olympiad.name}</Text>
+                    <Text strong style={{textWrapMode:'wrap', margin:'0px, 5px'}}>{olympiad.name}</Text>
+                  </Space>
+                }
+                style={{ height: '100%' }}
+              >
+                <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+                  <div>
                     <Tag 
                       icon={olympiad.statusIcon}
                       color={olympiad.statusColor}
                     >
                       {olympiad.status.toUpperCase()}
                     </Tag>
-                  </Space>
-                }
-                style={{ height: '100%' }}
-              >
-                <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+                  </div>
                   <div>
                     <CalendarOutlined />{' '}
                     <Text><strong>Boshlanish vaqti:</strong> {moment.utc(olympiad.startTime).format('LLL')}</Text>
@@ -140,12 +142,12 @@ const OlympiadList = () => {
                     <ClockCircleOutlined />{' '}
                     <Text><strong>Davomiyligi:</strong> {Math.round(olympiad.duration)} daqiqa</Text>
                   </div>
-                  <div>
+                  {/* <div>
                     <TeamOutlined />{' '}
                     <Text>
                       <strong>Ishtirokchilar:</strong> {olympiad.participants_count || 0}/{olympiad.max_participants || '∞'}
                     </Text>
-                  </div>
+                  </div> */}
                   
                   <Divider style={{ margin: '12px 0' }} />
                   

@@ -146,7 +146,7 @@ const OlympiadDetail = () => {
       <Card
         title={
           <Space>
-            <Title level={2} style={{ margin: 0 }}>
+            <Title level={2} style={{ margin:'0 ,5 ', textWrapMode:'wrap'}}>
               {olympiad.name}
             </Title>
             <Text style={{ color: statusInfo.statusColor }}>
@@ -157,6 +157,7 @@ const OlympiadDetail = () => {
         bordered
       >
         <div>
+            
           <Title level={4}>Description</Title>
           <Paragraph>{olympiad.description}</Paragraph>
 
